@@ -44,3 +44,6 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+lucidChard(https://lucid.app/lucidchart/7522aba1-139b-4b94-acb8-015dbe84daf8/edit?beaconFlowId=B0803775808E960D&invitationId=inv_e0df05e9-09e2-4fd9-afed-b7b71b6b3f7e&page=0_0#)
