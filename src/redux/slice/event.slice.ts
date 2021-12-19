@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import moment from 'moment';
 
-import leifHolmstrand from "../../assets/images/bamboo.jpg";
+import leifHolmstrand from "../../assets/images/leifHolmstrand.jpg";
 import publicChrismasBus from "../../assets/images/publicChrismasBus.jpg";
 import liveAdventCalendar from "../../assets/images/liveAdventCalendar.jpg";
 import nobelMuseum from "../../assets/images/nobelMuseum.jpg";
