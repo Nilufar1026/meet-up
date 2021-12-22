@@ -1,0 +1,49 @@
+.Header {
+  background-color: #1f6a6c;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  text-align: -webkit-center;  
+}
+.icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 1rem;
+}
+.iconText {
+  margin: 0;
+  color: white;
+  font-weight: 500;
+}
+ul.navbar {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 15px;
+  color: white;
+  font-weight: 300;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-self: center;
+}
+
+a {
+  margin: auto 1rem auto 1rem;
+  font-size: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+.searchbar{
+    
+    display: flex;
+    align-self: center;
+    justify-content: space-around;
+}
+.searchbar>input{
+    height: 1rem;
+    width: 10rem;
+}
+.searchbar>img{
+    height: 1rem;
+}

@@ -1,0 +1,36 @@
+.contact{
+    background-color:#1f6a6c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem;
+}
+.contact>h1{
+    font-size: 4rem;
+    margin-top: 4rem;
+}
+.contact>p{
+    margin-top: auto;
+}
+.messageContainer{
+    margin-top: 5rem;
+    
+}
+.messageContainer>h3{
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+}
+.messageContainer>input{
+    margin-top: 1.5rem;
+    border-style: none;
+}
+.inputName{
+    width: 35rem;
+    height:3rem;
+}
+.inputMessage{
+    width: 35rem;
+    height: 25rem;
+    margin-bottom: 2rem;
+}

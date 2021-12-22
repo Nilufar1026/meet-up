@@ -1,28 +1,25 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
-import { getEventsSelector } from '../../redux/slice/event.slice';
-import {Event} from '../../redux/slice/event.slice'
+import React from "react";
+import { useSelector } from "react-redux";
+import { getEventsSelector } from "../../redux/slice/event.slice";
+import { Event } from "../../redux/slice/event.slice";
+import * as S from "./styled";
 
-interface Props{
-    event:Event
-}
-
-const Card:React.FC<Props>=({event})=> {
-    // const renderComponentHandler = (product: Product) => {
-    //     setRenderComponent(true)
-    //     dispatch(addAvtiveCard(product))
-    //   }
-      const events = useSelector(getEventsSelector)
-    //   const dispatch = useAppDispatch()
-    //   const addToCartHandler = (product: Product) => dispatch(addToCart(product))
-    
+const Grid: React.FC = () => {
+  const events = useSelector(getEventsSelector);
   return (
-    <section className="card">
-        <div className="image"></div>
-        <h3>Title</h3>
-        <p>date</p>
-    </section>
+    <div className="allEvent" id="allEvent">
+      <h1>ALL EVENTS</h1>
+      <S.Container>
+        {events.map((event: Event) => (
+          <div key={event.id}>
+            <S.image src={event.imageSrc} alt="plants" />
+            <p>{event.name}</p>
+            <p>{event.date}</p>
+          </div>
+        ))}
+      </S.Container>
+    </div>
   );
-}
+};
 
-export default Card;
+export default Grid;
