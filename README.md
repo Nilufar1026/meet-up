@@ -1,8 +1,12 @@
-# Getting Started with Create React App
+# Getting Started with meetup App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
+
+install the dependencies to this project, you can run :
+
+### `npm install`
 
 In the project directory, you can run:
 
@@ -45,5 +49,6 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-
-lucidChard(https://lucid.app/lucidchart/7522aba1-139b-4b94-acb8-015dbe84daf8/edit?beaconFlowId=B0803775808E960D&invitationId=inv_e0df05e9-09e2-4fd9-afed-b7b71b6b3f7e&page=0_0#)
+## UML case-diagram
+![This is case-diagram image](./public/case-diagram.png)
+[Link to case diagram](https://lucid.app/lucidchart/7522aba1-139b-4b94-acb8-015dbe84daf8/edit?beaconFlowId=B0803775808E960D&invitationId=inv_e0df05e9-09e2-4fd9-afed-b7b71b6b3f7e&page=0_0#)
