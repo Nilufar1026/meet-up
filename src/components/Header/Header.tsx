@@ -1,27 +1,27 @@
 import React from "react";
 import './header.css'
-import logo from '../../assets/images/logo.jpg'
 import search from '../../assets/images/search.png'
 import SvgLogo from '../../assets/images/Logo'
+import { Link } from "react-router-dom";
 const Header=()=> {
   return (
     <div className="Header">
-      <div className="icon">
+      <Link to="/" className="icon">
         <SvgLogo />
         <h2 className="iconText">Stockholm Events</h2>
-      </div>
+      </Link>
       <ul className="navbar">
         <li>
-          <a href="#home">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <a href="#allEvent">All events</a>
+          <Link to="/events">All events</Link>
         </li>
         <li>
-          <a href="#about">About us</a>
+          <Link to="/about">About us</Link>
         </li>
         <li>
-          <a href="#contact">Contact us</a>
+          <Link to="/contact">Contact us</Link>
         </li>
       </ul>
       <div className="searchbar">

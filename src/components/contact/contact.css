@@ -1,18 +1,17 @@
 .contact{
-    background-color:#1f6a6c;
+    background-color:#4c898b;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 3rem;
+    
+    max-width: 100%;
 }
 .contact>h1{
     font-size: 4rem;
     margin-top: 4rem;
 }
-.contact>p{
-    margin-top: auto;
-}
+
 .messageContainer{
     margin-top: 5rem;
     

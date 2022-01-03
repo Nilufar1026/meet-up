@@ -6,7 +6,7 @@ import events from './slice/event.slice'
 const store = configureStore({
     reducer: {
         events,
-        
+       
     }
 })
 
