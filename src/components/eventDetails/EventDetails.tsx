@@ -1,7 +1,7 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { getEventsSelector } from "../../redux/slice/event.slice";
 import { useSelector } from "react-redux";
-
+import Comment  from "../comment/comment";
 const EventDetails = () => {
   const { id }:any = useParams();
  
@@ -20,7 +20,7 @@ const EventDetails = () => {
                 <p>{event.seets}</p>
                 <p>{event.date.getMonth()+1}/{event.date.getDate()}/{event.date.getFullYear()}</p>
                 <p>{event.address}</p>
-                
+                <Comment  />
             </div>
           ))}
         </div>

@@ -3,13 +3,17 @@ import { useSelector } from "react-redux";
 import { getEventsSelector, interestHandler } from "../../redux/slice/event.slice";
 import { Event } from "../../redux/slice/event.slice";
 import * as S from "./styled";
-import { useNavigate, useMatch, Link } from 'react-router-dom'
+import {  Link } from 'react-router-dom'
 import { useAppDispatch } from "../../redux/store.hook";
+
 const Card: React.FC = () => {
   const events = useSelector(getEventsSelector);
   
   const dispatch = useAppDispatch()
-  const eventInterestHandler = (event: Event) => dispatch(interestHandler(event))
+  const eventInterestHandler = (event: Event) => {
+    dispatch(interestHandler(event))
+   
+  }
   return (
     <div className="allEvent" id="allEvent">
       <h1>ALL EVENTS</h1>
@@ -20,7 +24,7 @@ const Card: React.FC = () => {
             <p>{event.name}</p>
             <p>{event.date.getMonth()+1}/{event.date.getDate()}/{event.date.getFullYear()}</p>
             <Link to={`/event/${event.id}`}>See more</Link>
-            <button onClick={() => eventInterestHandler(event)}>Interest</button>
+            <button onClick={() =>eventInterestHandler(event)}>Interest</button>
           </div>
         ))}
       </S.Container>
