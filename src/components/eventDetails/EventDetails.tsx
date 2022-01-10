@@ -1,17 +1,17 @@
 import { useNavigate, useParams } from "react-router-dom";
-import { getEventsSelector } from "../../redux/slice/event.slice";
+import { getEventsSelector, sortedActivities } from "../../redux/slice/event.slice";
 import { useSelector } from "react-redux";
 import Comment from "../comment/comment";
 import "./eventDetails.css";
+import { useAppSelector } from "../../redux/store.hook";
 const EventDetails = () => {
   const { id }: any = useParams();
-
-  const events = useSelector(getEventsSelector);
-
+const events = useSelector(getEventsSelector);
+const activitiesEvent=useAppSelector(sortedActivities)
   return (
     <div>
       <div className="detailsWrapper">
-        {events
+        {activitiesEvent
           .filter((event) => event.id === +id)
           .map((event, id) => (
             <div key={id} className="detailsContainer">
