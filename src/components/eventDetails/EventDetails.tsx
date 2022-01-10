@@ -1,7 +1,7 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { getEventsSelector } from "../../redux/slice/event.slice";
 import { useSelector } from "react-redux";
-import Comment from "../comment/Comment";
+import Comment from "../comment/comment";
 import "./eventDetails.css";
 const EventDetails = () => {
   const { id }: any = useParams();
