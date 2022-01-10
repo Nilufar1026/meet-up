@@ -4,9 +4,11 @@ import { Event } from './event.slice'
 
 interface EventComment  {
     comment: string[],
+   
 }
 const initialState:EventComment={
-    comment:[]
+    comment:[],
+    
 }
 const commentSlice = createSlice({
     name: "comment",

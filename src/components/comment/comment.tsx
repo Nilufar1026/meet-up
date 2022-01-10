@@ -7,7 +7,7 @@ import { addComment }  from "../../redux/slice/comment.slice";
 import EventComment from "../../redux/slice/comment.slice"
 import { RootState } from "../../redux/store";
 import { useState } from "react";
-
+import './comment.css'
 // interface CustomerType{
 //   id:number,
 //   name:string,
@@ -16,6 +16,7 @@ import { useState } from "react";
 const Comment = () => {
     const [eventComment,setEventComment]=useState("")
     const comments=useSelector((state:RootState)=>state.comment.comment)
+    
 const dispatch = useAppDispatch()
  const addCommentHandler=() => {
      if(!eventComment) return;
@@ -24,11 +25,11 @@ const dispatch = useAppDispatch()
     }
   return (
     <div>
-        <h3>name:nilufar</h3>
+        <h3>Comments :</h3>
         <input type="text"  value={eventComment} onChange={(e)=>setEventComment(e.target.value)}/>
         <button onClick={ addCommentHandler}>Add comennt</button>
         {comments.map(comment=>
-             (<div>
+             (<div >
                  <p>{comment}</p>
                  </div>)
         )}
