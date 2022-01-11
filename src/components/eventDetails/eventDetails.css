@@ -1,0 +1,29 @@
+.detailsWrapper{
+    width: 100%;
+    margin: 3rem 5rem auto 5rem;
+}
+.detailsContainer{
+    display: flex;
+    flex-direction: row;
+}
+.detailsContainer>img{
+    max-width: 30rem;
+    max-height: 25rem;
+}
+.details{
+    max-width: 50%;
+}
+.description, .seets, .date, .address{
+    text-align: start;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+.details>h1{
+    text-align: center;
+}
+.description{
+    margin-bottom: 3rem;
+}
+.comment{
+    text-align: start;
+}

@@ -26,7 +26,7 @@ export interface Event {
 export const initialState: Event[] = [
   {
     name: "Leif Holmstrand - From the Depth",
-    date: new Date("1/29/22"),
+    date: new Date('2022-01-19'),
     id: 1,
     imageSrc: leifHolmstrand,
     description:
@@ -37,7 +37,7 @@ export const initialState: Event[] = [
   },
   {
     name: "The Public Christmas bus",
-    date: new Date("12/20/22"),
+    date: new Date('2021-12-20'),
     id: 2,
     imageSrc: publicChrismasBus,
     description:
@@ -48,7 +48,7 @@ export const initialState: Event[] = [
   },
   {
     name: "Live Advent Calendar (in Swedish only)",
-    date: new Date("12/23/21"),
+    date: new Date('2021-12-23'),
     id: 3,
     imageSrc: liveAdventCalendar,
     description:
@@ -59,7 +59,7 @@ export const initialState: Event[] = [
   },
   {
     name: "The Nobel Prize Banquet – Behind the Scenes",
-    date: new Date("3/20/22"),
+    date: new Date('2022-03-20'),
     id: 4,
     imageSrc: nobelMuseum,
     description:
@@ -70,7 +70,7 @@ export const initialState: Event[] = [
   },
   {
     name: "Gingerbread House 2021",
-    date: new Date("1/8/22"),
+    date: new Date('2022-01-08'),
     id: 5,
     imageSrc: Gringerbread,
     description:
@@ -81,7 +81,7 @@ export const initialState: Event[] = [
   },
   {
     name: "Stockholm Winter City Kayak Tour",
-    date: new Date("4/21/22"),
+    date: new Date('2022-04-21'),
     id: 6,
     imageSrc: winterTour,
     description:
@@ -92,7 +92,7 @@ export const initialState: Event[] = [
   },
   {
     name: "A Room of One's Own - The Role of the Artist in the Late 19th century",
-    date: new Date("1/22/22"),
+    date: new Date('2022-01-22'),
     id: 7,
     imageSrc: aRoom,
     description:
@@ -103,7 +103,7 @@ export const initialState: Event[] = [
   },
   {
     name: "Art and Photography around 1900",
-    date: new Date("1/27/22"),
+    date: new Date('2022-01-27'),
     id: 8,
     imageSrc: photography,
     description:
@@ -114,7 +114,7 @@ export const initialState: Event[] = [
   },
   {
     name: "The master test - an armor is created",
-    date: new Date("4/21/22"),
+    date: new Date('2022-04-21'),
     id: 9,
     imageSrc: masterTest,
     description:
@@ -125,7 +125,7 @@ export const initialState: Event[] = [
   },
   {
     name: "The Arctic - while the ice is melting",
-    date: new Date("8/29/22"),
+    date: new Date("2022-08-23"),
     id: 10,
     imageSrc: arctic,
     description:
@@ -148,11 +148,14 @@ const eventSlice = createSlice({
       );
       state[eventIndex].seets -= 1;
     },
+    
   },
 });
 
 // export const {addProduct}= productSlice.actions
+
 export const getEventsSelector = (state: RootState) => state.events;
 export const { interestHandler } = eventSlice.actions
+export const sortedActivities= (state: RootState)  => state.events.slice().sort((a:any, b:any) => a.date-b.date)
 export default eventSlice.reducer;
 
