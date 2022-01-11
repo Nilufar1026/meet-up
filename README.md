@@ -16,7 +16,7 @@ En Meetup är en sammankomst för personer med ett gemensamt intresse. Det kan h
 
 * Som besökare vill jag kunna kommentera evenemang.
 
-##  instruktionerna
+##  Instruktionerna
 
 https://docs.google.com/document/d/136DTDYFeX-N2n4-fI_kryrc2Fv1--wSA-94aIAdNDJE/edit#heading=h.vmdgce6r6o3e
 
