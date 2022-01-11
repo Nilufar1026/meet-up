@@ -1,7 +1,7 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { getEventsSelector, sortedActivities } from "../../redux/slice/event.slice";
 import { useSelector } from "react-redux";
-import Comment from "../comment/comment";
+import Comment from "../comment/Comment";
 import "./eventDetails.css";
 import { useAppSelector } from "../../redux/store.hook";
 const EventDetails = () => {

@@ -18,14 +18,7 @@ const commentSlice = createSlice({
             //const index= state.findIndex(event => event.id === action.payload.id) 
             state.comment.push(action.payload)
         },
-        // removeFromCart: (state, action: PayloadAction<string>) => {
-        //     const productIndex = state.findIndex(product => product.id === action.payload)
-        //     if (state[productIndex].amount > 1) {
-        //         state[productIndex].amount -= 1
-        //     } else {
-        //         return state.filter(product => product.id !== action.payload)
-        //     }
-        // }
+       
     },
 })
 
