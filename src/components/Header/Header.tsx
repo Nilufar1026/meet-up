@@ -18,7 +18,7 @@ const Header=()=> {
           <Link to="/events">All events</Link>
         </li>
         <li>
-          <Link to="/about">About us</Link>
+          <Link data-testid="this-is-about" to="/about">About us</Link>
         </li>
         <li>
           <Link to="/contact">Contact us</Link>

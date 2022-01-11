@@ -1,23 +1,26 @@
 import { useNavigate, useParams } from "react-router-dom";
-import { getEventsSelector, sortedActivities } from "../../redux/slice/event.slice";
+import { getEventsSelector } from "../../redux/slice/event.slice";
 import { useSelector } from "react-redux";
 import Comment from "../comment/Comment";
 import "./eventDetails.css";
 import { useAppSelector } from "../../redux/store.hook";
+import { useState } from "react";
 const EventDetails = () => {
+  
   const { id }: any = useParams();
-const events = useSelector(getEventsSelector);
-const activitiesEvent=useAppSelector(sortedActivities)
+let events = useSelector(getEventsSelector);
+
+
   return (
     <div>
       <div className="detailsWrapper">
-        {activitiesEvent
+        {events
           .filter((event) => event.id === +id)
           .map((event, id) => (
             <div key={id} className="detailsContainer">
               <img src={event.imageSrc} alt={event.name} />
               <div className="details">
-                <h1>{event.name}</h1>
+                <h1 >{event.name}</h1>
                 <p className="category">{event.category.join(' | ')}</p>
                 <p className="description">{event.description}</p>
                 <p className="seets">Attend: {event.seets} seets</p>

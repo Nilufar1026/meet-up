@@ -156,6 +156,7 @@ const eventSlice = createSlice({
 
 export const getEventsSelector = (state: RootState) => state.events;
 export const { interestHandler } = eventSlice.actions
-export const sortedActivities= (state: RootState)  => state.events.slice().sort((a:any, b:any) => a.date-b.date)
+
+
 export default eventSlice.reducer;
 

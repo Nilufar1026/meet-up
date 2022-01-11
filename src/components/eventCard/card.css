@@ -1,0 +1,16 @@
+.allEvent-container{
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 30px;
+    grid-template-rows: repeat(2, 1fr);
+    grid-row-gap: 50px;
+    padding-bottom: 100px;
+}
+.event-card>img{
+    width: 22rem;
+  height: 24rem;
+}
+.event-card>h6{
+    color: red;
+}

@@ -1,9 +1,12 @@
 import {render ,screen} from '@testing-library/react'
+import Home from './Home'
+
+// import {render ,screen} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { MemoryRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from '../../redux/store';
-import Home from '../Home/Home';
+
 
 
 beforeEach(() => {
@@ -15,13 +18,10 @@ beforeEach(() => {
       {wrapper:MemoryRouter}
     )
   })
-describe('Tester for header component',()=>{
-    test('HEADER- renders Header component without errors', () => {})
-    test('HEADER - full header rendering/navigating', () => {
-        const leftClick = {button: 0}
-        userEvent.click(screen.getByText(/About us/i), leftClick)
-        expect(screen.getByText(/About us/i)).toBeInTheDocument()
+describe('Tester for Home component',()=>{
+    test('HOME- renders Home component without errors', () => {})
+    test('HOME - Test if Home component has text with expected word "ALL EVENTS"', () => {
+        const heading = screen.getByText(/ALL EVENTS/);
+        expect(heading).toBeInTheDocument();
       })
 })
-
-
