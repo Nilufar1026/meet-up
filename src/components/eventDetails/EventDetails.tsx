@@ -1,15 +1,22 @@
-import { useNavigate, useParams } from "react-router-dom";
-import { getEventsSelector } from "../../redux/slice/event.slice";
+import { useParams } from "react-router-dom";
+import {
+  getEventsSelector,
+  interestHandler,
+} from "../../redux/slice/event.slice";
 import { useSelector } from "react-redux";
 import Comment from "../comment/Comment";
 import "./eventDetails.css";
-import { useAppSelector } from "../../redux/store.hook";
-import { useState } from "react";
-const EventDetails = () => {
-  
-  const { id }: any = useParams();
-let events = useSelector(getEventsSelector);
+import { useAppDispatch } from "../../redux/store.hook";
+import { Event } from "../../redux/slice/event.slice";
 
+const EventDetails = () => {
+  const { id }: any = useParams();
+  let events = useSelector(getEventsSelector);
+
+  const dispatch = useAppDispatch();
+  const eventInterestHandler = (event: Event) => {
+    dispatch(interestHandler(event));
+  };
 
   return (
     <div>
@@ -20,22 +27,26 @@ let events = useSelector(getEventsSelector);
             <div key={id} className="detailsContainer">
               <img src={event.imageSrc} alt={event.name} />
               <div className="details">
-                <h1 >{event.name}</h1>
-                <p className="category">{event.category.join(' | ')}</p>
+                <h1>{event.name}</h1>
+                <p className="category">{event.category.join(" | ")}</p>
                 <p className="description">{event.description}</p>
-                <p className="seets">Attend: {event.seets} seets</p>
+                <p className="seats" data-testid="detailsSeats">
+                  Attend: {event.seats} seats
+                </p>
                 <p className="date">
                   Date: {event.date.getMonth() + 1}/{event.date.getDate()}/
                   {event.date.getFullYear()}
                 </p>
+                <button onClick={() => eventInterestHandler(event)}>
+                  Interest
+                </button>
                 <p className="address">Address: {event.address}</p>
               </div>
             </div>
           ))}
-          <div className="comment">
-
-            <Comment />
-          </div>
+        <div className="comment">
+          <Comment />
+        </div>
       </div>
     </div>
   );

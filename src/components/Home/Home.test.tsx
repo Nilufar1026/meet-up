@@ -1,13 +1,8 @@
 import {render ,screen} from '@testing-library/react'
 import Home from './Home'
-
-// import {render ,screen} from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
 import { MemoryRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from '../../redux/store';
-
-
 
 beforeEach(() => {
     // eslint-disable-next-line testing-library/no-render-in-setup
@@ -18,6 +13,7 @@ beforeEach(() => {
       {wrapper:MemoryRouter}
     )
   })
+  
 describe('Tester for Home component',()=>{
     test('HOME- renders Home component without errors', () => {})
     test('HOME - Test if Home component has text with expected word "ALL EVENTS"', () => {

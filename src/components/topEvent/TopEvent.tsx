@@ -1,4 +1,3 @@
-import React from "react";
 import { useSelector } from "react-redux";
 import { getEventsSelector } from "../../redux/slice/event.slice";
 import './topEvent.css'

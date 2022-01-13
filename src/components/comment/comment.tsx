@@ -26,11 +26,11 @@ const dispatch = useAppDispatch()
   return (
     <div >
         <h3>Comments :</h3>
-        <input type="text"  value={eventComment} onChange={(e)=>setEventComment(e.target.value)}/>
+        <input type="text"  value={eventComment} onChange={(e)=>setEventComment(e.target.value)} placeholder="Write you comment"/>
         <button onClick={ addCommentHandler}>Add comennt</button>
         {comments.map((comment,index)=>
              (<div key={index}>
-                 <p>{comment}</p>
+                 <p data-testid="detailsComment">{comment}</p>
                  </div>)
         )}
     </div>
