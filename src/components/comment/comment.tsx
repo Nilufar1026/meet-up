@@ -1,7 +1,4 @@
-import { useNavigate, useParams } from "react-router-dom";
-import { getEventsSelector } from "../../redux/slice/event.slice";
 import { useSelector } from "react-redux";
-
 import { useAppDispatch } from "../../redux/store.hook";
 import { addComment }  from "../../redux/slice/comment.slice";
 import { RootState } from "../../redux/store";
