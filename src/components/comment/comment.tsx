@@ -4,15 +4,10 @@ import { useSelector } from "react-redux";
 
 import { useAppDispatch } from "../../redux/store.hook";
 import { addComment }  from "../../redux/slice/comment.slice";
-import EventComment from "../../redux/slice/comment.slice"
 import { RootState } from "../../redux/store";
 import { useState } from "react";
 import './comment.css'
-// interface CustomerType{
-//   id:number,
-//   name:string,
-//   comment:string[],
-// }
+
 const Comment = () => {
     const [eventComment,setEventComment]=useState("")
     const comments=useSelector((state:RootState)=>state.comment.comment)

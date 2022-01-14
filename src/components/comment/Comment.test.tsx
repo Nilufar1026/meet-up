@@ -3,7 +3,6 @@ import userEvent from "@testing-library/user-event";
 import { MemoryRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "../../redux/store";
-
 import Comment from "./Comment";
 
 beforeEach(() => {
