@@ -4,7 +4,7 @@ import {
   interestHandler,
 } from "../../redux/slice/event.slice";
 import { useSelector } from "react-redux";
-import Comment from "../comment/Comment";
+import Comment from "../comment/comment";
 import "./eventDetails.css";
 import { useAppDispatch } from "../../redux/store.hook";
 import { Event } from "../../redux/slice/event.slice";

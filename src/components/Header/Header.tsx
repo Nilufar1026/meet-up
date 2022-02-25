@@ -3,7 +3,23 @@ import './header.css'
 import search from '../../assets/images/search.png'
 import SvgLogo from '../../assets/images/Logo'
 import { Link } from "react-router-dom";
-const Header=()=> {
+import { signOut } from "firebase/auth";
+import { auth } from "../../firebase-config";
+
+type OwnProps = {
+  isAuth:boolean
+}
+
+type Props = OwnProps
+
+
+const Header: React.FunctionComponent<Props> =({isAuth})=> {
+  const signUserOut=()=>{
+    signOut(auth).then(()=>{
+      localStorage.clear()
+      window.location.pathname="/login"
+    })
+  }
   return (
     <div className="Header">
       <Link to="/" className="icon">
@@ -22,6 +38,18 @@ const Header=()=> {
         </li>
         <li>
           <Link to="/contact">Contact us</Link>
+        </li>
+        <li>
+        {!isAuth ?(
+
+          <Link to="/login">Login</Link>
+        ):(
+          <>
+
+            <Link to="/event">Create event</Link>
+          <button onClick={signUserOut}>Log Out</button>
+          </>
+        )}
         </li>
       </ul>
       <div className="searchbar">

@@ -1,8 +1,6 @@
 .wrapper{
     background-color: #1D2535;
-    max-width: 84rem;
     height: 51rem;
-    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
